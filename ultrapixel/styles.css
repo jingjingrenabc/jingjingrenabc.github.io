@@ -1,15 +1,23 @@
+/* 引入 Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* 设置全局样式 */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:  'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
+/* 侧边栏样式 */
 .sidebar {
-    width: 240px;
-    background-color: #fff;
+    width: 200px;
+    background-color: #ffffff;
     color: #333;
     padding: 20px;
     position: fixed;
@@ -17,16 +25,17 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* 调整为顶部对齐 */
+    justify-content: flex-start;
     border-right: 1px solid #ddd;
 }
 
 .sidebar-title {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 700;
     margin-bottom: 20px;
     color: #007acc;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sidebar ul {
@@ -46,16 +55,16 @@ body {
     font-weight: 500;
     font-size: 1em;
     display: flex;
-    align-items: center; /* 添加这行使图标和文字对齐 */
+    align-items: center;
     padding: 10px 15px;
     border-radius: 8px;
     transition: color 0.3s, background-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sidebar ul li a i {
-    margin-right: 10px; /* 添加这行给图标和文字之间添加间距 */
+    margin-right: 10px;
 }
-
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
@@ -64,29 +73,39 @@ body {
 }
 
 .content {
-    margin-left: 280px; /* 增加左边距，适应侧边栏宽度 */
+    margin-left: 240px;
     padding: 20px;
     flex: 1;
 }
 
-.paper-info {
+.paper-info,
+.paper-citation,
+.contact-us {
     text-align: center;
     margin: 20px 0;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.paper-info h1 {
-    font-size: 2em;
+.paper-info h1{
+    font-size: 1.7em;
+    font-family: 'Montserrat', sans-serif;
+}
+.paper-citation h2,
+.contact-us h2 {
+    font-size: 1.8em;
     font-weight: 500;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .authors {
     margin-bottom: 10px;
-    font-size: 0.9em;
+    font-size: 0.92em;
 }
 
 .authors .author a, .authors .author {
@@ -97,11 +116,6 @@ body {
 
 .authors .author a:hover {
     text-decoration: underline;
-}
-
-.affiliations {
-    font-size: 0.9em;
-    color: #555;
 }
 
 .links {
@@ -118,34 +132,47 @@ body {
 .paper-info a {
     color: #007acc;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2em;
+    font-weight: 400;
+    font-size: 1em;
 }
 
 .paper-info a:hover {
     text-decoration: underline;
 }
-
-.abstract {
-    text-align: left;
-    margin: 20px 0;
+.affiliations {
+    font-size: 1em;
+    color: #555;
+    
 }
 
 .gallery-section {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* 增加底部间距 */
+    margin-top: 40px; /* 增加顶部间距 */
 }
+
+
+.gallery-section h2 {
+    font-size: 1.5em; /* 调整标题字体大小 */
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+    text-align: center; /* 文字居中 */
+}
+
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 2px; /* Add more space between gallery items */
+    gap: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .gallery-item {
     position: relative;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 5px;
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
 }
@@ -185,21 +212,22 @@ body {
     padding: 2px 5px;
     font-size: 0.9em;
     border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .watermark {
     position: absolute;
-    top: 95%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.0); /* 半透明浅灰色 */
-    color: rgba(255, 255, 255, 0.0);
+    background-color: rgba(211, 211, 211, 0.5);
+    color: #333;
     padding: 5px 10px;
     font-size: 1.2em;
     border-radius: 3px;
-    font-family: 'Montserrat', sans-serif; /* 使用Montserrat字体 */
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    pointer-events: none; /* Prevent interaction with the watermark */
+    pointer-events: none;
 }
 
 .modal {
@@ -210,19 +238,34 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 60%;
-    max-width: 700px;
-    border-radius: 8px;
-    top: 50%;
-    transform: translateY(-50%);
+.modal-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 100px); /* 留出空间给缩略图 */
+    overflow: auto;
     position: relative;
+}
+
+.modal-content {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease; /* 添加平滑的缩放动画 */
+    cursor: grab; /* 添加抓手光标 */
+    width: auto; /* 确保初始宽度 */
+    height: auto; /* 确保初始高度 */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-content:active {
+    cursor: grabbing; /* 添加拖动光标 */
 }
 
 .close {
@@ -242,56 +285,17 @@ body {
     cursor: pointer;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    font-size: 1.2em;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 25px;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev {
-    left: 25px;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .thumbnails {
-    position: absolute;
+    position: fixed;
     top: 50%;
-    right: 5%;
+    right: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-height: 80%;
     overflow-y: auto;
     transform: translateY(-50%);
+    z-index: 2;
 }
 
 .thumbnails img {
@@ -308,41 +312,4 @@ body {
 
 .thumbnail-active {
     border: 2px solid #007acc;
-}
-.contact-us {
-    text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.contact-us h2 {
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.contact-us p {
-    font-size: 1em;
-    color: #555;
-}
-
-.contact-us ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-us ul li {
-    margin: 5px 0;
-}
-
-.contact-us ul li a {
-    color: #007acc;
-    text-decoration: none;
-}
-
-.contact-us ul li a:hover {
-    text-decoration: underline;
 }

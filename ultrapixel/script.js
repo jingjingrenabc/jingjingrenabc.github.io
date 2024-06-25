@@ -1,15 +1,21 @@
-// Get the modal
+// 获取模态框元素
 var modal = document.getElementById("modal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
+// 获取模态框内容元素
 var modalImg = document.getElementById("modal-img");
 var captionText = document.getElementById("caption");
 var resolutionText = document.getElementById("resolution");
+var watermark = document.querySelector(".watermark");
 
+// 获取所有图片和缩略图容器
 var images = document.querySelectorAll('.gallery-item img');
 var thumbnailsContainer = document.querySelector('.thumbnails');
 var currentIndex = 0;
+var scale = 1; // 初始缩放比例
+var isDragging = false;
+var startX, startY, scrollLeft, scrollTop;
 
+// 为每张图片创建缩略图并添加点击事件
 images.forEach((img, index) => {
     var thumbnail = img.cloneNode(true);
     thumbnail.classList.remove('gallery-image');
@@ -25,26 +31,32 @@ images.forEach((img, index) => {
     }
 });
 
+// 打开模态框
 function openModal(index) {
     currentIndex = index;
+    scale = 1; // 重置缩放比例
     modal.style.display = "block";
     updateModalContent();
 }
 
+// 关闭模态框
 function closeModal() {
     modal.style.display = "none";
 }
 
+// 更新模态框内容
 function updateModalContent() {
     var img = images[currentIndex];
-    modalImg.src = img.src;
-    modalImg.style.width = 'auto';
-    modalImg.style.height = 'auto';
+    modalImg.style.backgroundImage = `url(${img.src})`;
+    modalImg.style.transform = `scale(${scale})`;
+    modalImg.style.width = '100%'; // 适应模态框的宽度
+    modalImg.style.height = '100%'; // 保持宽高比
     captionText.innerHTML = img.alt;
-    resolutionText.innerHTML = img.dataset.resolution;
+    watermark.style.display = "block"; // 显示水印
     updateThumbnails();
 }
 
+// 更新缩略图高亮
 function updateThumbnails() {
     var thumbnails = document.querySelectorAll('.thumbnail');
     thumbnails.forEach((thumbnail, index) => {
@@ -57,15 +69,14 @@ function updateThumbnails() {
     });
 }
 
-// Get the <span> element that closes the modal
+// 获取关闭按钮并添加点击事件
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     closeModal();
+    watermark.style.display = "none"; // 关闭模态框时隐藏水印
 }
 
-// Next/previous controls
+// 切换图片的前后控件
 function plusSlides(n) {
     currentIndex += n;
     if (currentIndex >= images.length) {
@@ -87,7 +98,7 @@ next.onclick = function () {
     plusSlides(1);
 }
 
-// Add keyboard navigation
+// 添加键盘导航功能
 document.addEventListener('keydown', function(event) {
     if (modal.style.display === 'block') {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
@@ -96,13 +107,38 @@ document.addEventListener('keydown', function(event) {
             plusSlides(1);
         } else if (event.key === 'Escape') {
             closeModal();
+            watermark.style.display = "none"; // 关闭模态框时隐藏水印
         }
     }
 });
 
-// Highlight active section in sidebar
+
+
+modalImg.addEventListener('mouseleave', function() {
+    isDragging = false;
+});
+
+modalImg.addEventListener('mouseup', function() {
+    isDragging = false;
+});
+
+modalImg.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - modalImg.offsetLeft;
+    const y = e.pageY - modalImg.offsetTop;
+    const walkX = (x - startX) * 2; // 调整图片移动速度
+    const walkY = (y - startY) * 2; // 调整图片移动速度
+    modalImg.scrollLeft = scrollLeft - walkX;
+    modalImg.scrollTop = scrollTop - walkY;
+});
+
+
+
+
+// 高亮侧边栏的活动部分
 const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.gallery-section, .paper-info');
+const sections = document.querySelectorAll('.gallery-section, .paper-info, .paper-citation, .contact-us');
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -131,7 +167,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Update thumbnails on scroll
+// 更新滚动时的缩略图高亮
 window.addEventListener('scroll', () => {
     let currentIndex = -1;
     images.forEach((img, index) => {
