@@ -1,1 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Sidebar Navigation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="sidebar-title">UltraPixel</h2>
+        
+            <ul>
+                <li><a href="#paper-info" class="nav-link"><i class="fas fa-file-alt"></i> Paper Information</a></li>
+                <li><a href="#text-guided" class="nav-link"><i class="fas fa-paint-brush"></i> Text-to-Image </a></li>
+                <li><a href="#controlnet" class="nav-link"><i class="fas fa-image"></i> ControlNet</a></li>
+                <li><a href="#personalization" class="nav-link"><i class="fas fa-cat"></i> Personalization</a></li>
+                <li><a href="#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        
+    </div>
+    <div class="content">
+        <div id="paper-info" class="paper-info">
+            <h1>UltraPixel: Advancing Ultra-High-Resolution Image Synthesis to New Peaks</h1>
+            <div class="authors">
+                <p>
+                    <span class="author"><a href="https://scholar.google.com/citations?user=wcuqACgAAAAJ&hl=zh-CN&oi=ao" target="_blank">Jingjing Ren<sup>1, 2</sup></a></span>, 
+                    <span class="author"><a href="https://scholar.google.com/citations?hl=zh-CN&user=foGn_TIAAAAJ" target="_blank">Wenbo Li<sup>2</sup></a></span>, 
+                    <span class="author"><a href="https://scholar.google.com/citations?hl=zh-CN&user=KWbcBucAAAAJ" target="_blank">Haoyu Chen<sup>1, 2</sup></a></span>, 
+                    <span class="author">Renjing Pei<sup>2</sup></span>, 
+                    <span class="author">Bin Shao<sup>2</sup></span>, 
+                    <span class="author">Yong Guo<sup>2</sup></span>, 
+                    <span class="author">Long Peng<sup>2</sup></span>, 
+                    <span class="author">Fenglong Song<sup>2</sup></span>, 
+                    <span class="author"><a href="https://scholar.google.com/citations?user=AQtqhaYAAAAJ&hl=zh-CN" target="_blank">Lei Zhu<sup>1, 3</sup></a></span>
+                </p>
+                <p>
+                    <span class="affiliation"><sup>1</sup> The Hong Kong University of Science and Technology (Guangzhou)</span>, 
+                    <span class="affiliation"><sup>2</sup> Huawei Noah's Ark Lab</span>, 
+                    <span class="affiliation"><sup>3</sup> The Hong Kong University of Science and Technology </span>
+                </p>
+            </div>
+            <div class="links">
+                <p><a href="https://arxiv.org/abs/example" target="_blank">Paper</a></p>
+                <p><a href="https://github.com/example" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+        
+        <section id="text-guided" class="gallery-section">
+            <h2>Text-Guided Results</h2>
+            <div class="gallery">
+                
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/pick111_1609.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/view_pick_54.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5760x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick_751.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/000pick_151.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2160x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src="images/11pick_448.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src="images/pick_888.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src="images/pick_893.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_212.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5760x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/pick_234.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/333pick_435.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick_21.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 4; grid-row: span 4;">
+                    <img src="images/pick_614.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_54.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_162.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/pick_0.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src="images/pick_ggg60.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/gggpick_245.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/pick99_1922.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/court_002492.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_1723.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src=" images/hhpick_183.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 2; grid-row: span 2;">
+                    <img src=" images/pick_919.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 2; grid-row: span 2;">
+                    <img src=" images/pick_1187.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3 ; grid-column: span 2; grid-row: span 3;">
+                    <img src=" images/pick_845.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3 ; grid-column: span 2; grid-row: span 3;">
+                    <img src=" images/pick_903.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/pick_49hjhu.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src="images/pic1111k_370.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/gggpick_81.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/pick_496.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 4; grid-row: span 4;">
+                    <img src="images/111pick_113.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src="images/pick_62.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x2160</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src=" images/pick_1944.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 2 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick111_1304.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick444_1830.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src=" images/pick99_1957.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick111_213.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick999_1940.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/laion2B-en-aesthetic-M000146_0112706297.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/pick_826.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick_531.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/laion2B-en-aesthetic-M000130_0097331632.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/pick_1848.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick_20.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src="images/pick99_1949.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_56.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick_1598.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_182.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick_365.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src=" images/pick_1745.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/pick_1973.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src=" images/pick_443.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x2160</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/pick_755.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src=" images/pick_112.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x2160</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/laion2B-en-aesthetic-M000138_0106835185.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src=" images/pick_152.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src=" images/pick_60.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_40.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/laion2B-en-aesthetic-M000011_0017328307.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/pick_707.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/444pick_482.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5760x3072</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick111_884.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/jjpick_823.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick_656.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src="images/pick111_937.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/sa_000428_sa_4796934.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 2 ; grid-column: span 3; grid-row: span 2;">
+                    <img src=" images/rrrpick_145.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_235.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_1601.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/pick_11174.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2160x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src=" images/pick_1684.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src=" images/ours_laion2B-en-aesthetic-M000014_0019136963.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2160x3840</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src=" images/jjjpick_240.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <img src=" images/pick_802.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x2560</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/laion2B-en-aesthetic-M000035_0032938951.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/pick_761.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 4; grid-row: span 4;">
+                    <img src="images/pick_603.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick_760.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_133.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 4; grid-row: span 4;">
+                    <img src="images/pick_175.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">5120x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_176.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_150.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/pick_1847.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/pick_4.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 5 ; grid-column: span 3; grid-row: span 5;">
+                    <img src="images/pick_1423.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2560x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 4 / 3 ; grid-column: span 4; grid-row: span 3;">
+                    <img src="images/pick_16.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 4 ; grid-column: span 3; grid-row: span 4;">
+                    <img src="images/pick_95.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/laion2B-en-aesthetic-M000074_0060733213.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">2880x5760</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1 ; grid-column: span 3; grid-row: span 3;">
+                    <img src="images/laion2B-en-aesthetic-M000137_0106603082.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 3 / 2 ; grid-column: span 3; grid-row: span 2;">
+                    <img src="images/55pick_23.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3072x6144</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+                
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1 ; grid-column: span 4; grid-row: span 2;">
+                    <img src="images/111pick_591.jpg" alt="Image 1" class="gallery-image">
+                    <div class="resolution">3840x5120</div>
+                    <div class="watermark">UltraPixel</div>
+                </div>
+           
+            </div>
+        </section>
 
+        <section id="controlnet" class="gallery-section">
+            <h2>ControlNet Results</h2>
+            <div class="gallery">
+                
+            </div> 
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 1; grid-row: span 1;">
+                    <img src="controlnet/edge_laion2B-en-aesthetic-M000017_0021312642.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution"></div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="controlnet/gg0_00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="controlnet/9_00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="controlnet/gg9_00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3072x3072</div>
+                </div>
+
+            </div> 
+            <div class="gallery">
+               
+            </div> 
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 2 / 1; grid-column: span 2; grid-row: span 1;">
+                    <img src="controlnet/edge_gg_pick_110.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution"></div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 2 / 1; grid-column: span 4; grid-row: span 2;">
+                    <img src="controlnet/2_00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2160x3840</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 2 / 1; grid-column: span 4; grid-row: span 2;">
+                    <img src="controlnet/4_00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2160x3840</div>
+                </div>
+                
+            </div> 
+                
+          
+            
+        </section>
+
+        <section id="personalization" class="gallery-section">
+            <h2>Personalization</h2>
+            <h3>User Input</h3>
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/1_B0004902.jpg" alt="Image 8" class="gallery-image">
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 2 / 3; grid-column: span 2; grid-row: span 3;">
+                    <img src="personalized results/6_cat.jpg" alt="Image 9" class="gallery-image">
+                    
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 5 / 3; grid-column: span 5; grid-row: span 3;">
+                    <img src="personalized results/5_cat.jpg" alt="Image 9" class="gallery-image">
+                   
+                </div>
+            </div>
+            <h3>Personalized Results</h3>
+            
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/ff00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 3 / 5; grid-column: span 3; grid-row: span 5;">
+                    <img src="personalized results/cc00003.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x2160</div>
+                </div>
+                
+                <div class="gallery-item" style="--aspect-ratio: 2 / 1; grid-column: span 4; grid-row: span 2;">
+                    <img src="personalized results/00003.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 4 / 3; grid-column: span 4; grid-row: span 3;">
+                    <img src="personalized results/00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/00012.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x2048</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 4 / 3; grid-column: span 4; grid-row: span 3;">
+                    <img src="personalized results/00098.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/fff00008.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 3 / 2; grid-column: span 3; grid-row: span 2;">
+                    <img src="personalized results/00005.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x4096</div>
+                </div>
+                
+                
+                
+                
+            </div> 
+
+        </section>
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, please contact Jingjing Ren (jren044@connect.hkust-gz.edu.cn)</p>
+            
+        </section>
+        
+
+    </div>
+
+    <!-- Modal for image enlargement -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+
+        <div class="thumbnails">
+            <!-- Thumbnails will be generated dynamically by JavaScript -->
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
